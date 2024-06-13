@@ -1,3 +1,8 @@
+/**
+ *@author DiegoGVDev
+ *@version v0.0.1
+ */
+
 package programmation_logic;
 
 public class ReverseStrings {
