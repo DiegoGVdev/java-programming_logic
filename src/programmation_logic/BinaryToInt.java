@@ -20,14 +20,14 @@ public class BinaryToInt {
 
     public double decimal(String str) {
         String numBinaryReversed = reverseString(str);
-        int potencia = 1;
+        int pow = 1;
         double numDecimal = 0;
 
         for (int i = 0; i < numBinaryReversed.length(); i++) {
             String charToStr = Character.toString(numBinaryReversed.charAt(i));
             double strToDouble = Double.parseDouble(charToStr);
-            numDecimal += strToDouble * potencia;
-            potencia *= 2;
+            numDecimal += strToDouble * pow;
+            pow *= 2;
         }
         return numDecimal;
     }
