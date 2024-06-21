@@ -8,7 +8,7 @@ package programmation_logic;
 public class BinaryToInt {
 
 
-    private String reverseString(String strParam) {
+    private static String reverseString(String strParam) {
         int countStr = strParam.length() - 1;
         String reversed = "";
 
@@ -18,8 +18,8 @@ public class BinaryToInt {
         return reversed;
     }
 
-    public double decimal(String str) {
-        String numBinaryReversed = reverseString(str);
+    public static double decimal(String str) {
+        String numBinaryReversed = BinaryToInt.reverseString(str);
         int pow = 1;
         double numDecimal = 0;
 
@@ -32,14 +32,11 @@ public class BinaryToInt {
         return numDecimal;
     }
 
+    //test local.
 
-}
-
-class Main {
     public static void main(String[] args) {
         String testBinary = "100010";
-        BinaryToInt convert = new BinaryToInt();
-        double decimal = convert.decimal(testBinary);
+        double decimal = BinaryToInt.decimal(testBinary);
         System.out.println(testBinary + " is equal to " + decimal + " in decimal system.");
     }
 }
